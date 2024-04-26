@@ -1,0 +1,32 @@
+<h1 class="text-center my-3">Lista de Funcionários</h1>
+<div class="row w-50 d-block m-auto g-3">
+  <div class="col-12">
+    <table class="table table-sm table-hover">
+      <thead">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Nome</th>
+          <th scope="col">e-mail</th>
+          <th scope="col">Ações</th>
+        </tr>
+      </thead>
+      <tbody class="table-group-divider">
+        {{#each funcionario}}
+        <tr>
+          <th scope="row">{{@key}}</th>
+          <td>{{this.nome}}</td>
+          <td>{{this.email}}</td>
+          <td>
+            <a class="text-decoration-none" href="/funcionarios/Alterar/{{this.id_funcionario}}">
+              <span><i class="bi bi-pencil-square bi-sm px-1 text-warning"></i></span>
+            </a>
+            <a class="text-decoration-none" href="/funcionarios/Deletar/{{this.id_funcionario}}">
+              <span><i class="bi bi-x-octagon bi-sm px-1 text-danger"></i></span>
+            </a>
+          </td>
+        </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+</div>
