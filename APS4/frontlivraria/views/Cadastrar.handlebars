@@ -1,0 +1,25 @@
+<h1 class="text-center my-3">Cadastro de Livros</h1>
+<form action="/livros/Cadastrar" method="post">
+  <div class="row w-50 d-block m-auto g-3">
+    <div class="col-12">
+      <label class="form-label" for="titulo">Titulo do livro:</label>
+      <input class="form-control" type="text" name="titulo" id="titulo" placeholder="Digite o titulo do livro." required />
+    </div>
+    <div class="col-12">
+      <label class="form-label" for="autor">Autor do livro:</label>
+      <input class="form-control" type="text" name="autor" id="autor"
+        placeholder="Digite o autor do livro." required />
+    </div>
+    <div class="col-12">
+      <label class="form-label" for="preco">Preço do livro:</label>
+      <input class="form-control" type="text" name="preco" id="preco" placeholder="Digite o preço do livro." required />
+    </div>
+    <div class="col-12">
+      <label class="form-label" for="link_imagem">Link da imagem do livro:</label>
+      <input class="form-control" type="text" name="link_imagem" id="link_imagem" placeholder="Digite o link da imagem do livro." required />
+    </div>
+    <div class="d-grid gap-2 col-4 me-auto">
+      <button class="btn btn-primary my-3" type="submit">Cadastrar</button>
+    </div>
+  </div>
+</form>

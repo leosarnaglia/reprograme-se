@@ -1,0 +1,23 @@
+<h1 class="text-center my-3">Acervo Digital</h1>
+
+<div class="container text-center">
+  <div class="row justify-content-center">
+    {{#each livro}}
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-4">
+        <center>
+          <img class="img-thumbnail rounded" src="{{this.link_imagem}}" alt="{{this.titulo}}" style="max-width: 100%; height: auto;"><br>
+          <strong>{{this.titulo}}</strong><br>
+          {{this.autor}} <br>
+          R$ {{this.preco}} <br>
+          cod. Livro:{{this.id_livro}}<br>
+          <a class="text-decoration-none" href="/livros/Alterar/{{this.id_livro}}">
+            <i class="bi bi-pencil-square bi-md text-warning"></i>
+          </a>
+          <a class="text-decoration-none" href="/livros/Deletar/{{this.id_livro}}">
+            <i class="bi bi-trash bi-md text-danger"></i>
+          </a>
+        </center>
+      </div>
+    {{/each}}
+  </div>
+</div>
